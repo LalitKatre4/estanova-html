@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saved Residences Shortlist | EstateNova Luxury Real Estate</title>
+  <meta name="description" content="View and coordinate private showings for your saved portfolio of architectural estates and luxury residences." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="min-h-screen flex flex-col bg-stone-50 text-stone-900 font-sans selection:bg-amber-700 selection:text-white">
+
+  <!-- NAVBAR -->
+  <header id="main-navbar" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-stone-950/80 backdrop-blur-md border-b border-stone-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="index.html" class="group flex items-center gap-3">
+          <div class="w-9 h-9 border border-amber-400/80 flex items-center justify-center bg-stone-900/40 backdrop-blur-sm group-hover:border-amber-300 transition-colors">
+            <span class="font-brand font-bold text-lg tracking-widest text-amber-400 group-hover:text-amber-300">
+              EN
+            </span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-brand text-xl font-bold tracking-[0.2em] text-white uppercase group-hover:text-amber-300 transition-colors">
+              EstateNova
+            </span>
+            <span class="text-[9px] uppercase tracking-[0.3em] text-stone-400 font-light -mt-0.5">
+              Luxury Real Estate
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="properties.html" class="text-xs uppercase tracking-[0.2em] font-medium transition-colors text-stone-300 hover:text-amber-400">
+            Properties
+          </a>
+          <a href="services.html" class="text-xs uppercase tracking-[0.2em] font-medium transition-colors text-stone-300 hover:text-amber-400">
+            Services
+          </a>
+          <a href="agents.html" class="text-xs uppercase tracking-[0.2em] font-medium transition-colors text-stone-300 hover:text-amber-400">
+            Private Agents
+          </a>
+          <a href="about.html" class="text-xs uppercase tracking-[0.2em] font-medium transition-colors text-stone-300 hover:text-amber-400">
+            About
+          </a>
+          <a href="contact.html" class="text-xs uppercase tracking-[0.2em] font-medium transition-colors text-stone-300 hover:text-amber-400">
+            Contact
+          </a>
+        </nav>
+
+        <!-- Right Actions -->
+        <div class="flex items-center gap-4">
+          <a href="tel:+15550192834" class="hidden xl:flex items-center gap-2 text-xs text-stone-300 hover:text-amber-400 transition-colors tracking-wider">
+            <svg class="w-3.5 h-3.5 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>+1 (555) 019-2834</span>
+          </a>
+
+          <!-- Saved Shortlist Button -->
+          <button type="button" class="open-favorites-drawer-btn relative p-2.5 text-amber-400 transition-colors cursor-pointer" title="View Saved Shortlist">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            <span class="favorites-badge-count hidden absolute -top-0.5 -right-0.5 w-4 h-4 bg-amber-600 text-white rounded-full text-[10px] font-bold flex items-center justify-center">0</span>
+          </button>
+
+          <button type="button" class="open-schedule-modal-btn hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-amber-700 hover:bg-amber-600 text-white text-xs uppercase tracking-[0.15em] font-medium transition-colors cursor-pointer">
+            <span>Schedule Viewing</span>
+          </button>
+
+          <button type="button" id="mobile-menu-open-btn" class="lg:hidden p-2 text-stone-300 hover:text-white cursor-pointer">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="flex-1">
+    <!-- PAGE HEADER -->
+    <div class="bg-stone-900 text-white pt-32 pb-16 border-b border-stone-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl space-y-3">
+          <div class="inline-flex items-center gap-2 text-amber-400 text-[11px] uppercase tracking-[0.25em] font-medium">
+            <span class="w-6 h-px bg-amber-400"></span>
+            <span>Private Portfolio Shortlist</span>
+          </div>
+          <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight text-white leading-tight">
+            Your Saved Architectural Residences
+          </h1>
+          <p class="text-xs sm:text-sm text-stone-300 font-light leading-relaxed max-w-2xl">
+            Review handpicked estates saved to your private device session. Request a synchronized showing itinerary or download a confidential dossier.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACTION BAR -->
+    <section class="py-4 bg-white border-b border-stone-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-4">
+        <span id="favorites-page-count" class="text-xs uppercase tracking-wider text-stone-600 font-medium">
+          0 Estates Saved
+        </span>
+
+        <div class="flex items-center gap-3">
+          <button type="button" id="clear-all-favorites-page-btn" class="px-4 py-2 border border-stone-300 hover:border-red-600 hover:text-red-700 text-stone-600 text-xs uppercase tracking-wider transition-colors cursor-pointer">
+            Clear Shortlist
+          </button>
+          <button type="button" id="request-showing-shortlist-btn" class="open-schedule-modal-btn px-5 py-2 bg-amber-700 hover:bg-amber-600 text-white text-xs uppercase tracking-wider font-medium transition-colors cursor-pointer">
+            Schedule Viewing For Shortlist
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHORTLIST GRID CONTAINER -->
+    <div class="py-16 bg-stone-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Rendered by JS -->
+        <div id="favorites-page-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+
+        <!-- Empty State -->
+        <div id="favorites-page-empty" class="hidden text-center py-24 bg-white border border-stone-200 p-8 max-w-lg mx-auto space-y-4">
+          <div class="w-16 h-16 rounded-full bg-stone-100 border border-stone-200 flex items-center justify-center text-stone-400 mx-auto">
+            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          </div>
+          <h3 class="font-serif text-2xl text-stone-900 font-normal">No Saved Residences</h3>
+          <p class="text-xs text-stone-500 font-light leading-relaxed">
+            You have not added any properties to your private shortlist yet. Browse our curated architectural portfolio and click the heart icon on any estate to bookmark it.
+          </p>
+          <div class="pt-2">
+            <a href="properties.html" class="inline-block px-8 py-3 bg-stone-900 hover:bg-amber-700 text-white text-xs uppercase tracking-[0.2em] font-medium transition-colors">
+              Explore All Properties
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-stone-950 text-stone-300 pt-16 pb-12 border-t border-stone-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-stone-800">
+        <div class="lg:col-span-4 space-y-4">
+          <a href="index.html" class="inline-flex items-center gap-3">
+            <div class="w-9 h-9 border border-amber-400 flex items-center justify-center bg-stone-900">
+              <span class="font-brand font-bold text-amber-400 text-base">EN</span>
+            </div>
+            <div>
+              <span class="font-brand text-xl font-bold tracking-[0.2em] text-white uppercase block">EstateNova</span>
+              <span class="text-[8px] uppercase tracking-[0.3em] text-stone-400 font-light block">Luxury Real Estate</span>
+            </div>
+          </a>
+          <p class="text-xs text-stone-400 font-light leading-relaxed">
+            Representing premier luxury architectural residences, modern penthouses, and private estates across the world's most coveted destinations.
+          </p>
+          <div class="pt-2 text-xs text-stone-400">
+            <p>Brokerage License: <strong class="text-stone-300 font-normal">DRE #01928340</strong></p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-2 space-y-3">
+          <span class="text-[10px] uppercase tracking-[0.25em] text-amber-400 font-semibold block">Portfolio</span>
+          <ul class="space-y-2 text-xs font-light">
+            <li><a href="properties.html" class="hover:text-white transition-colors">All Properties</a></li>
+            <li><a href="properties.html?status=for-sale" class="hover:text-white transition-colors">Properties For Sale</a></li>
+            <li><a href="properties.html?status=for-rent" class="hover:text-white transition-colors">Luxury Rentals</a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors">Our Services</a></li>
+            <li><a href="agents.html" class="hover:text-white transition-colors">Private Agents</a></li>
+            <li><a href="favorites.html" class="text-amber-400 hover:text-white transition-colors">Saved Shortlist</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-3 space-y-3">
+          <span class="text-[10px] uppercase tracking-[0.25em] text-amber-400 font-semibold block">Flagship Desks</span>
+          <ul class="space-y-2 text-xs font-light">
+            <li><span class="text-stone-200">Beverly Hills:</span> 100 Luxury Blvd, Suite 400</li>
+            <li><span class="text-stone-200">Manhattan:</span> 740 Madison Ave, Floor 14</li>
+            <li><span class="text-stone-200">Miami Beach:</span> 1000 Venetian Way, Suite 800</li>
+            <li><span class="text-stone-200">Aspen:</span> 420 South Galena St, Suite 200</li>
+            <li class="pt-1"><a href="tel:+15550192834" class="text-amber-400 hover:text-amber-300">+1 (555) 019-2834</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-3 space-y-3">
+          <span class="text-[10px] uppercase tracking-[0.25em] text-amber-400 font-semibold block">The Monograph Journal</span>
+          <p class="text-xs text-stone-400 font-light leading-relaxed">
+            Receive quarterly market intelligence and prime off-market listings reserved for accredited buyers.
+          </p>
+          <form onsubmit="event.preventDefault(); showToast('Subscribed to The Monograph Journal.', 'check'); this.reset();" class="space-y-2">
+            <input type="email" placeholder="Enter private email" required class="w-full bg-stone-900 border border-stone-800 text-white text-xs px-3 py-2.5 focus:outline-none focus:border-amber-500 font-light" />
+            <button type="submit" class="w-full bg-amber-700 hover:bg-amber-600 text-white text-xs uppercase tracking-wider py-2 transition-colors font-medium">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-stone-400 gap-4">
+        <p>&copy; 2026 EstateNova Luxury Real Estate LLC. All rights reserved.</p>
+        <div class="flex items-center gap-6 text-[11px] uppercase tracking-wider">
+          <a href="about.html" class="hover:text-stone-200 transition-colors">Equal Housing Opportunity</a>
+          <a href="contact.html" class="hover:text-stone-200 transition-colors">Terms & Privacy</a>
+          <a href="agents.html" class="hover:text-stone-200 transition-colors">Advisory Roster</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FAVORITES DRAWER OVERLAY -->
+  <div id="favorites-drawer" class="hidden fixed inset-0 z-50 overflow-hidden">
+    <div class="drawer-backdrop absolute inset-0 bg-stone-950/70 backdrop-blur-sm"></div>
+    <div class="absolute inset-y-0 right-0 max-w-full flex pl-10">
+      <div class="drawer-panel w-screen max-w-md bg-stone-50 border-l border-stone-200 shadow-2xl flex flex-col translate-x-full transition-transform duration-300">
+        <div class="p-6 bg-stone-900 text-white flex items-center justify-between border-b border-stone-800">
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            <h3 class="font-serif text-lg text-white font-medium">Saved Residences <span class="favorites-text-count">(0)</span></h3>
+          </div>
+          <button type="button" id="close-favorites-drawer-btn" class="p-1 text-stone-400 hover:text-white transition-colors cursor-pointer">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          </button>
+        </div>
+
+        <div id="drawer-favorites-list" class="flex-1 overflow-y-auto p-6 space-y-4"></div>
+
+        <div id="drawer-favorites-empty" class="flex-1 flex flex-col items-center justify-center p-6 text-center text-stone-500">
+          <div class="w-12 h-12 rounded-full border border-stone-300 flex items-center justify-center text-stone-400 mb-3">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          </div>
+          <p class="font-serif text-stone-900 text-base mb-1">No Saved Residences</p>
+          <p class="text-xs font-light max-w-xs">Click the heart icon on any property card to save it to your private portfolio shortlist.</p>
+        </div>
+
+        <div id="drawer-favorites-footer" class="p-6 bg-white border-t border-stone-200 space-y-3">
+          <a href="favorites.html" class="block w-full py-2.5 bg-amber-700 hover:bg-amber-600 text-white text-xs uppercase tracking-wider font-medium text-center transition-colors">
+            View All Shortlisted Residences
+          </a>
+          <button type="button" id="clear-drawer-favorites-btn" class="w-full text-center text-xs text-stone-500 hover:text-stone-900 uppercase tracking-wider transition-colors cursor-pointer">
+            Clear Shortlist
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCHEDULE VIEWING MODAL -->
+  <div id="schedule-viewing-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div class="modal-backdrop absolute inset-0 bg-stone-950/80 backdrop-blur-sm"></div>
+    <div class="relative bg-white border border-stone-200 shadow-2xl max-w-lg w-full p-6 sm:p-8 z-10 max-h-[90vh] overflow-y-auto">
+      <div class="flex items-start justify-between mb-6 pb-4 border-b border-stone-100">
+        <div>
+          <span class="text-[10px] uppercase tracking-[0.25em] text-amber-800 font-semibold block">Confidential Itinerary</span>
+          <h3 class="font-serif text-2xl text-stone-900 font-normal mt-0.5">Schedule Private Showing</h3>
+        </div>
+        <button type="button" id="close-schedule-modal-btn" class="text-stone-400 hover:text-stone-900 cursor-pointer">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+
+      <form id="schedule-viewing-form" class="space-y-4">
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-stone-600 font-medium mb-1.5">Selected Estate</label>
+          <select name="property_select" class="w-full bg-stone-50 border border-stone-200 text-stone-900 px-3 py-2 text-xs font-light focus:outline-none focus:border-amber-700"></select>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs uppercase tracking-wider text-stone-600 font-medium mb-1.5">Viewing Date *</label>
+            <input type="date" name="viewing_date" required class="w-full bg-stone-50 border border-stone-200 text-stone-900 px-3 py-2 text-xs font-light focus:outline-none focus:border-amber-700" />
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-wider text-stone-600 font-medium mb-1.5">Preferred Time Window</label>
+            <select name="viewing_time" class="w-full bg-stone-50 border border-stone-200 text-stone-900 px-3 py-2 text-xs font-light focus:outline-none focus:border-amber-700">
+              <option value="morning">Morning (10:00 AM – 12:00 PM)</option>
+              <option value="afternoon">Afternoon (1:00 PM – 4:00 PM)</option>
+              <option value="sunset">Twilight / Golden Hour (5:00 PM – 7:00 PM)</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-stone-600 font-medium mb-1.5">Legal Full Name *</label>
+          <input type="text" name="client_name" required placeholder="Legal full name or entity" class="w-full bg-stone-50 border border-stone-200 text-stone-900 px-3 py-2 text-xs font-light focus:outline-none focus:border-amber-700" />
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs uppercase tracking-wider text-stone-600 font-medium mb-1.5">Direct Email *</label>
+            <input type="email" name="client_email" required placeholder="name@domain.com" class="w-full bg-stone-50 border border-stone-200 text-stone-900 px-3 py-2 text-xs font-light focus:outline-none focus:border-amber-700" />
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-wider text-stone-600 font-medium mb-1.5">Direct Phone *</label>
+            <input type="tel" name="client_phone" required placeholder="+1 (555) 000-0000" class="w-full bg-stone-50 border border-stone-200 text-stone-900 px-3 py-2 text-xs font-light focus:outline-none focus:border-amber-700" />
+          </div>
+        </div>
+        <button type="submit" class="w-full py-3 bg-stone-900 hover:bg-amber-700 text-white text-xs uppercase tracking-[0.2em] font-medium transition-colors">
+          Submit Showing Request
+        </button>
+      </form>
+
+      <div id="schedule-modal-success" class="hidden text-center py-6 space-y-4">
+        <div class="w-12 h-12 bg-amber-50 text-amber-800 rounded-full flex items-center justify-center mx-auto">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+        </div>
+        <h4 class="font-serif text-xl text-stone-900">Showing Request Registered</h4>
+        <p class="text-xs text-stone-600 font-light max-w-sm mx-auto leading-relaxed">
+          Your private inquiry has been assigned directly to our Senior Managing Partner. We will confirm the security clearance within 4 hours.
+        </p>
+        <button type="button" id="schedule-modal-reset-btn" class="px-6 py-2 bg-stone-900 text-white text-xs uppercase tracking-wider">
+          Close Window
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOBILE MENU OVERLAY -->
+  <div id="mobile-menu-overlay" class="hidden fixed inset-0 z-50 lg:hidden">
+    <div class="absolute inset-0 bg-stone-950/80 backdrop-blur-md"></div>
+    <div class="relative w-full max-w-sm bg-stone-950 h-full p-6 text-white flex flex-col justify-between overflow-y-auto border-r border-stone-800">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-stone-800">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 border border-amber-400 flex items-center justify-center bg-stone-900">
+              <span class="font-brand font-bold text-amber-400 text-sm">EN</span>
+            </div>
+            <span class="font-brand font-bold tracking-[0.2em] text-sm uppercase text-white">EstateNova</span>
+          </div>
+          <button type="button" id="mobile-menu-close-btn" class="p-2 text-stone-400 hover:text-white cursor-pointer">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          </button>
+        </div>
+
+        <nav class="py-6 space-y-4 text-sm font-medium uppercase tracking-[0.15em]">
+          <a href="index.html" class="block text-stone-300 hover:text-white py-1">Home</a>
+          <a href="properties.html" class="block text-stone-300 hover:text-white py-1">Properties</a>
+          <a href="services.html" class="block text-stone-300 hover:text-white py-1">Services</a>
+          <a href="agents.html" class="block text-stone-300 hover:text-white py-1">Private Agents</a>
+          <a href="about.html" class="block text-stone-300 hover:text-white py-1">About Us</a>
+          <a href="contact.html" class="block text-stone-300 hover:text-white py-1">Contact & Salons</a>
+          <a href="favorites.html" class="block text-amber-400 py-1">Saved Shortlist <span class="favorites-text-count text-amber-400">(0)</span></a>
+        </nav>
+      </div>
+
+      <div class="pt-6 border-t border-stone-800 space-y-4">
+        <a href="tel:+15550192834" class="text-xs text-stone-300 block tracking-wider">Direct: +1 (555) 019-2834</a>
+        <button type="button" class="open-schedule-modal-btn w-full py-3 bg-amber-700 hover:bg-amber-600 text-white text-xs uppercase tracking-[0.2em] font-medium transition-colors">
+          Schedule Viewing
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
